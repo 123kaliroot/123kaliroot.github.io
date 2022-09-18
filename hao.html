@@ -18,21 +18,13 @@ body
 </head>
 
 <body>
-    <audio muted loop src="audiofrequency/wrap me in plastic.mp3" controls="controls" autoplay="autoplay" ></audio>
-    <script>
-      
-        function toggleSound(){
-            var audio = document.querySelector('audio')
-            if (audio.paused) {
-              
-                audio.play();
-            }else{
-                audio.paused = false
-            }
-        }
-
-        setInterval(toggleSound(), 1000)
-    </script>
+    <audio muted loop src="audiofrequency/wrap me in plastic.mp3" controls="controls" autoplay="autoplay"id="video" ref="video" ></audio>
+	<script>
+ $(document).click(_=>{
+	document.getElementById("video").src="xxx.mp3";//注意如果是vue，这边的路径要加require,不然可能找不到，如require("@/assets/video/xxx.mp3") 
+});
+		this.$refs.video.play();
+	</script>
 </body>
 
 </html>
