@@ -1,11 +1,13 @@
+
 <!DOCTYPE html>
-<html>
-	
+<html lang="en">
+
 <head>
-	
-<meta charset="utf-8"> 
-<title>资源建设学院</title> 
-<style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+	<style>
 body 
 {
 	background-image:url('images/bj3.jpg');
@@ -13,9 +15,24 @@ body
 	background-size:100%;
 }
 </style>
-	</head>
-	<body>
-	<embed src="audiofrequency/wrap me in plastic.mp3"  height="50" width="250" hidden="false" autostart="true" loop="true"></br>
+</head>
 
+<body>
+    <audio muted loop src="audiofrequency/wrap me in plastic.mp3" controls="controls" autoplay="autoplay" ></audio>
+    <script>
+      
+        function toggleSound(){
+            var audio = document.querySelector('audio')
+            if (audio.paused) {
+              
+                audio.play();
+            }else{
+                audio.paused = false
+            }
+        }
+
+        setInterval(toggleSound(), 1000)
+    </script>
 </body>
+
 </html>
